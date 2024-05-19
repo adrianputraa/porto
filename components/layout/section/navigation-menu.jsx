@@ -63,6 +63,14 @@ export default function Navigation() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
+          <Link href="/" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              About
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
           <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
           <NavigationMenuContent className='bg-gradient-to-br from-white via-white to-neutral-400/25 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900/25'>
             <ul className="w-[400px] flex flex-col gap-2 p-4">
@@ -97,13 +105,7 @@ export default function Navigation() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              About
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        
         
       </NavigationMenuList>
     </NavigationMenu>

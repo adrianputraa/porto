@@ -317,8 +317,7 @@ function LinkTooltip({ children, label, href, icon, link = true, delay = 200 }) 
     const copyEmailToClipboard = () => {
         toast({
             title: 'You just copied my email! aesaprofiles@gmail.com',
-            description: 'Paste it on your favourite email client and services :)',
-            variant: 'success'
+            description: 'Paste it on your favourite email client and services :)'
         })
     }
     return (

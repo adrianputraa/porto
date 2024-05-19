@@ -4,7 +4,7 @@ import Homepage from "@/components/home/homepage";
 export default function Home() {
   return (
     <DefaultLayout>
-      <div className="h-full w-full min-h-[calc(100dvh-4rem)] flex flex-col gap-2 p-2 items-center justify-center">
+      <div className="h-full w-full min-h-[calc(100dvh-4rem)] flex flex-col gap-2 p-2 pt-4 xl:p-0 items-center justify-start md:justify-center">
         <Homepage />
       </div>
     </DefaultLayout>
