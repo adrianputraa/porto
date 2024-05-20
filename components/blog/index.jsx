@@ -1,5 +1,5 @@
 import Heading from "./section/heading"
-import List from "./section/List"
+import List from "./section/list"
 
 export default function IndexPage() {
     return (
