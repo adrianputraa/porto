@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import Image from "next/image"
 
-const emailString = 'aesaprofiles@gmail.com'
+const emailString = 'atputrap@gmail.com'
 const technologies = [
     {
         label: 'Visual Studio Code',
@@ -331,7 +331,7 @@ function LinkTooltip({ children, label, href, icon, link = true, delay = 200 }) 
                     <span className={`h-10 w-fit flex gap-2 items-center justify-center rounded ml-auto p-1 px-2 border bg-neutral-200 hover:!bg-neutral-100 dark:bg-neutral-800 dark:hover:!bg-neutral-700 hover:cursor-pointer transition-colors duration-200 group-hover:border-neutral-400 dark:group-hover:border-neutral-950 group-hover:bg-white dark:group-hover:bg-neutral-950`}
                     onClick={() => copyEmailToClipboard()}>
                         {icon}
-                        <span className="text-sm">aesaprofiles@gmail.com</span>
+                        <span className="text-sm">{emailString}</span>
                         <span className="sr-only">{label} button</span>
                     </span>
                 :
