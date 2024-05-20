@@ -63,7 +63,7 @@ export default function Navigation() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
+          <Link href="/about" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle() + ' !font-bold'}>
               About
             </NavigationMenuLink>

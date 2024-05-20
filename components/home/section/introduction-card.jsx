@@ -266,7 +266,7 @@ function TextTooltip({ children, label, icon, color }) {
     return (
         <HoverCard openDelay={200}>
             <HoverCardTrigger>
-                <span className={`animate-pulse hover:animate-none ml-1 flex items-center gap-1 border-b-2 border-dashed ${style} hover:cursor-pointer transition-colors duration-2000`}>
+                <span className={`animate-pulse hover:animate-none ml-1 flex items-center gap-1 border-b-2 border-dashed hover:cursor-pointer transition-colors duration-2000 ${style}`}>
                     {icon} 
                     {label.toLowerCase()}
                 </span>
@@ -274,7 +274,7 @@ function TextTooltip({ children, label, icon, color }) {
 
             <HoverCardContent className='w-fit'>
                 <div className="flex flex-col gap-2 items-start">
-                    <div className={"w-full flex gap-2 items-center " + style}>
+                    <div className={`w-full flex gap-2 items-center ${style}`}>
                         {icon}
                         {label}
                     </div>

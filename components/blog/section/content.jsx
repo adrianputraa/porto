@@ -13,7 +13,7 @@ export default function Content() {
         <div className='flex flex-col gap-2 items-center justify-center'>
             <div className="group w-full py-2 px-4 rounded-md flex flex-col gap-2 hover:bg-neutral-200 dark:hover:bg-neutral-900 select-text transition-colors duration-200">
                 <div>
-                    <p className='text-neutral-800 dark:text-neutral-500 dark:group-hover:text-neutral-300 whitespace-pre-line'>
+                    <p className='text-neutral-800 dark:text-neutral-400 dark:group-hover:text-neutral-300 whitespace-pre-line'>
                         {article.article}
                     </p>
                 </div>
@@ -28,16 +28,4 @@ export default function Content() {
             </Link>
         </div>
     )
-}
-
-function TitleIcon({ tag }) {
-    if (tag === 'hobby') {
-        return <Gamepad2 size={20} />
-    }
-
-    if (tag === 'dev') {
-        return <CodeXml size={20} />
-    }
-
-    return <Newspaper size={20} />
 }
