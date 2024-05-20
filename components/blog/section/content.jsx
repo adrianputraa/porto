@@ -2,9 +2,7 @@
 import { useContext } from 'react'
 import Link from 'next/link'
 import { ArticleContext } from './context'
-import { ChevronsRight, Gamepad2, Newspaper, CodeXml , Clock } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { recentPost } from '@/lib/constant/recent-post'
 
 export default function Content() {
     const article = useContext(ArticleContext)
