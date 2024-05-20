@@ -9,4 +9,4 @@ You are free to clone and do whatever you want with this repository.
 - [Next.js](https://nextjs.org/)
 - [shadcn](https://ui.shadcn.com/)
 - [Lucide React](https://lucide.dev/)
-- [better-sqlite](https://www.npmjs.com/package/better-sqlite3) (sql not included)
+- [better-sqlite](https://www.npmjs.com/package/better-sqlite3)

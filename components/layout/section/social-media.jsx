@@ -43,7 +43,7 @@ export default function SocialMediaButton() {
             >
                 <div>Click to open my linkedin!</div>
             </ShowHover>
-            <ShowHover 
+            {/* <ShowHover 
                 label='discord' 
                 href='#'
                 icon={[DiscordDarkIcon, DiscordLightIcon]}
@@ -57,7 +57,7 @@ export default function SocialMediaButton() {
                 icon={<Twitter />}
             >
                 <div>Click to open my twitter.. or X.</div>
-            </ShowHover>
+            </ShowHover> */}
         </div>
     )
 }
@@ -65,6 +65,7 @@ export default function SocialMediaButton() {
 function ShowHover({ children, label, href, icon, link = true, delay = 200 }) {
     const { toast } = useToast()
     const copyDiscordUsername = () => {
+        navigator.clipboard.writeText('@aesampah')
         toast({
             title: 'Discord username copied!',
             description: 'My discord username @aesampah has been copied to clipboard.'

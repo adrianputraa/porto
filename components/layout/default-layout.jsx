@@ -5,7 +5,7 @@ export default function DefaultLayout({ children }) {
         <div className="w-full max-w-[100dvw]">
             <Navbar />
 
-            <main className="w-full mx-auto min-h-[calc(100dvh-4rem)]">
+            <main className="relative w-full mx-auto min-h-[calc(100dvh-4rem)]">
                 {children}
             </main>
         </div>

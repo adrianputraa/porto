@@ -1,4 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import RecentPost from "./recent-post"
+
 
 const tabs = [
     {
@@ -24,7 +26,7 @@ export default function RecentActivityTabs() {
             </TabsList>
 
             <SytledTabsContent value="blog">
-                Blog tab content
+                <RecentPost />
             </SytledTabsContent>
 
             <SytledTabsContent value="projects">

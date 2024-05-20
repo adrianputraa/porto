@@ -1,6 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require("tailwindcss/defaultTheme")
-
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -53,19 +51,6 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'aesa': {
-          '50': '#f3f8fb',
-          '100': '#e4ecf5',
-          '200': '#d0e0ed',
-          '300': '#b0cbe0',
-          '400': '#8aafd0',
-          '500': '#6e95c3',
-          '600': '#6587ba',
-          '700': '#506da5',
-          '800': '#455b88',
-          '900': '#3b4c6d',
-          '950': '#283043',
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -85,9 +70,6 @@ module.exports = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
     },
   },

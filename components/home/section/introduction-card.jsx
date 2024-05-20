@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import Image from "next/image"
 
+const emailString = 'aesaprofiles@gmail.com'
 const technologies = [
     {
         label: 'Visual Studio Code',
@@ -160,35 +161,46 @@ export default function IntroductionCard() {
                                         <br/>
                                         {' '} <span className="text-purple-400">p</span> {' = '} <span className="text-purple-400">l.p</span> {' = '} <span className="text-purple-400">g.p</span>{';'}
                                         <br/>
-                                        {' '} <span className="text-purple-400">ap</span> {' ?? '} <span className="text-purple-400">c()</span>{';'}
+                                        {' '} <span className="text-purple-400">a</span> {' ?? '} <span className="text-purple-400">sm()</span>{';'}
                                     </span>
                                     <br/>
                                     <br/>
                                     <span className='text-green-400'>
                                         <span className="text-neutral-400">
-                                            {' // oh its price, qty an so on...'}
+                                            {' // oh its price, quantity an so on...'}
                                         </span>
                                         <br/>
-                                        {' const { price, qty } = item; '}
+                                        {' const { price, quantity } = item; '}
                                         <br/>
-                                        {' price = local.price = global.price;'} 
+                                        {' price = domestic.price = international.price;'} 
                                         <br/>
-                                        {' authorizedPayment ?? calculate();'}
+                                        {' if (authorized) {'}
+                                        <br/>
+                                        <span className="ml-4">
+                                            {' sendMoney(); '}
+                                        </span>
+                                        <br/>
+                                        {' } '}
                                     </span>
                                 </code>
                             </TextTooltip>
                             <TextTooltip label={'Clean'} icon={<Eye />} color={'blue'}>
-                                <p className="text-sm">Sometimes, less lines = eye movement = less tiring.</p>
+                                <p className="text-sm">Complex code might look awesome, but a nightmare to work on.</p>
                                 <code className="w-full bg-zinc-800 text-sm p-2  rounded">
-                                    <span className="text-red-500">
-                                        {' const price = item.price; '} 
+                                    <span className='text-red-400'>
+                                        {' const price = item.price, qty = item.qty; '} 
                                         <br/>
-                                        {' const qty = item.qty; '} 
+                                        {' price = domestic.price; domestic.price = international.price;'}
                                         <br/>
-                                        {' price = local.price; '}
+                                        {' true ?? doSomething();'}
+                                    </span>
+                                    <br/>
+                                    <br/>
+                                    <span className="text-green-500">
+                                        {' const { price, quantity } = item; '} 
                                         <br/>
-                                        {' local.price = global.price; '} 
-                                        <br/>
+                                        {' price = domestic.price = international.price; '}
+                                        <br />
                                         {' if (true) {'}
                                         <br/>
                                         <span className="ml-4">
@@ -196,15 +208,6 @@ export default function IntroductionCard() {
                                         </span>
                                         <br/>
                                         {' } '}
-                                    </span>
-                                    <br/>
-                                    <br/>
-                                    <span className='text-green-400'>
-                                        {' const { price, qty } = item; '}
-                                        <br/>
-                                        {' price = local.price = global.price;'} 
-                                        <br/>
-                                        {' true ?? doSomething();'}
                                     </span>
                                 </code>
                             </TextTooltip>
@@ -315,6 +318,7 @@ function TechnologyButton({ label, icon, iconDark, description }) {
 function LinkTooltip({ children, label, href, icon, link = true, delay = 200 }) {
     const { toast } = useToast()
     const copyEmailToClipboard = () => {
+        navigator.clipboard.writeText(emailString)
         toast({
             title: 'You just copied my email! aesaprofiles@gmail.com',
             description: 'Paste it on your favourite email client and services :)'

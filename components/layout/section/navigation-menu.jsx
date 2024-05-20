@@ -56,7 +56,7 @@ export default function Navigation() {
       <NavigationMenuList>
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink className={navigationMenuTriggerStyle() + ' !font-bold'}>
               Home
             </NavigationMenuLink>
           </Link>
@@ -64,19 +64,19 @@ export default function Navigation() {
 
         <NavigationMenuItem>
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <NavigationMenuLink className={navigationMenuTriggerStyle() + ' !font-bold'}>
               About
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
+          <NavigationMenuTrigger className='font-bold'>Blog</NavigationMenuTrigger>
           <NavigationMenuContent className='bg-gradient-to-br from-white via-white to-neutral-400/25 dark:from-neutral-950 dark:via-neutral-950 dark:to-neutral-900/25'>
             <ul className="w-[400px] flex flex-col gap-2 p-4">
               <p className="text-neutral-400 font-semibold">Categories</p>
               <li className="w-full">
-                <Link legacyBehavior passHref href={'/blog/search?q=hobby'}>
+                <Link legacyBehavior passHref href={'/blog?cat=fun'}>
                   <NavigationMenuLink className="w-fit flex items-center gap-2 rounded-md px-3 py-2 hover:text-blue-600 dark:hover:text-blue-400 dark:hover:bg-neutral-800 transition-colors duration-150">
                       <ChevronRight size={16}/>
                       <Gamepad2 />
@@ -85,7 +85,7 @@ export default function Navigation() {
                 </Link>
               </li>
               <li className="w-full">
-                <Link legacyBehavior passHref href={'/blog/search?q=dev'}>
+                <Link legacyBehavior passHref href={'/blog?cat=dev'}>
                   <NavigationMenuLink className="w-fit flex items-center gap-2 rounded-md px-3 py-2 hover:text-green-600 dark:hover:text-green-400 dark:hover:bg-neutral-800 transition-colors duration-150">
                       <ChevronRight size={16}/>
                       <CodeXml />
@@ -94,7 +94,7 @@ export default function Navigation() {
                 </Link>
               </li>
               <li className="w-full">
-                <Link legacyBehavior passHref href={'/blog/search?q=dev'}>
+                <Link legacyBehavior passHref href={'/blog'}>
                   <NavigationMenuLink className="w-fit flex items-center gap-2 rounded-md text-neutral-600 dark:text-neutral-400 hover:text-orange-900 dark:hover:text-neutral-300 transition-colors duration-150">
                       <ChevronsRight size={24}/>
                       <span>View all</span>
