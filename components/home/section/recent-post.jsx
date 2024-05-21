@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { ChevronsRight, Gamepad2, Newspaper, CodeXml , Clock } from 'lucide-react'
+import { formatDate } from '@/lib/formatter/date'
 import { Button } from '@/components/ui/button'
 import { recentPost } from '@/lib/constant/recent-post'
 
 export default function RecentPost() {
-    const currentDate = new Date
     return (
         <div className='flex flex-col gap-2 items-center justify-center'>
             {recentPost.map((post, index) => (
@@ -28,7 +28,7 @@ export default function RecentPost() {
                                 <Clock size={12}/>
                             </span>
                             <p className='flex gap-2 text-sm'>
-                                {post.date.toLocaleString()}
+                                {formatDate(post.date)}
                             </p>
                         </div>
                     </div>
