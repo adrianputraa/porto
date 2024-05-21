@@ -11,8 +11,23 @@ const fontSans = FontSans({
 })
 
 export const metadata = {
+  metadataBase: new URL('https://adrianputra.pw'),
+  alternate: {
+    canonical: '/'
+  },
+  authors: [{ name: 'Adrian', url: 'https://adrianputra.pw' }],
+  keywords: ['nextjs', 'next', 'react', 'portofolio', 'adrianputra', 'aesampah', 'aesa'],
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   title: "adrianputra",
   description: "Cooking something epic",
+  openGraph: {
+    images: '/images/profileadrianputra-_400x400.jpg'
+  },
 };
 
 export default function RootLayout({ children }) {
