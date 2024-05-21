@@ -1,12 +1,7 @@
 import DefaultLayout from "@/components/layout/default-layout";
 import Homepage from "@/components/home/homepage";
 
-export const metadata = {
-  title: 'About - adrianputraa',
-  openGraph: { 
-    description: 'Skilled Front End Developer | Expert in Next.js & React'
-  }
-}
+
 
 export default function Home() {
   return (
