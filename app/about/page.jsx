@@ -1,6 +1,13 @@
 import DefaultLayout from "@/components/layout/default-layout";
 import AboutPage from "@/components/about/about";
 
+export const metadata = {
+  title: 'Home - adrianputraa',
+  openGraph: { 
+    description: 'Skilled Front End Developer | Expert in Next.js & React'
+  }
+}
+
 export default function About() {
   return (
     <DefaultLayout>

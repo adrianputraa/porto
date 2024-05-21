@@ -23,8 +23,8 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  title: "adrianputra",
-  description: "Cooking something epic",
+  title: "Home - adrianputraa",
+  description: "Cooking something epic in Next.js and React | adrianputraa",
   openGraph: {
     images: '/images/profileadrianputra-_400x400.jpg'
   },
