@@ -89,15 +89,27 @@ function CategoryIcon() {
 
     if (tag[0] === 'dev') {
         return (
-            <span className="text-green-400">
-                <CodeXml size={normal} />
-            </span>
+            <div className="flex gap-2 items-center ml-2">
+                <span className="text-green-400">
+                    <CodeXml size={normal} />
+                </span>
+
+                <span className="text-neutral-600">
+                    <ChevronsRight size={mini} />
+                </span>
+            </div>
         )
     }
 
     return (
-        <span className="text-yellow-400">
-            <Newspaper size={normal} />
-        </span>
+        <div className="flex gap-2 items-center ml-2">
+                <span className="text-yellow-400">
+                    <Newspaper size={normal} />
+                </span>
+
+                <span className="text-neutral-600">
+                    <ChevronsRight size={mini} />
+                </span>
+            </div>
     )
 }

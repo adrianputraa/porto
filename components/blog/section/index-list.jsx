@@ -1,12 +1,13 @@
 'use client'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import Link from 'next/link'
-import { ChevronsRight, Gamepad2, Newspaper, CodeXml , Clock } from 'lucide-react'
+import { ChevronsRight, Gamepad2, Newspaper, CodeXml , Clock, LoaderCircle } from 'lucide-react'
+import { useToast } from '@/components/ui/use-toast'
 import { IndexContext } from './index-context'
 import { formatDate } from '@/lib/formatter/date'
 import { Button } from '@/components/ui/button'
 
-export default function ListPost() {
+export default function IndexList() {
     
 
     return (
@@ -17,7 +18,33 @@ export default function ListPost() {
 }
 
 function ListMenu() {
+    const [isLoaded, setLoadedState] = useState(false)
+    const [isLoading, setLoadingState] = useState(false)
     const postIndex = useContext(IndexContext)
+    const { toast } = useToast()
+    const loadMorePost = () => {
+        if (isLoaded) {
+            setTimeout(() => {
+                toast({
+                    title: 'No more post to load :(',
+                    description: '',
+                    variant: 'destructive'
+                })
+            })
+        } else {
+            setLoadingState(true)
+            
+            setTimeout(() => {
+                setLoadedState(true)
+                toast({
+                    title: 'All post are loaded :)',
+                    description: 'You are seeing all the post available.'
+                })
+                setLoadingState(false)
+            }, 1000)
+        }
+
+    }
 
     if (postIndex.length === 0) {
         return (
@@ -74,13 +101,12 @@ function ListMenu() {
                 </Link>
             ))}
 
-            <Link href='/blog'>
-                <Button type={'button'} variant={'secondary'} className='group rounded-full bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-800'>
-                    <span className='border-b border-dashed border-transparent group-hover:border-neutral-700 text-neutral-700 dark:group-hover:border-neutral-400 dark:text-neutral-400'>
-                        {'Load more blog posts'}
-                    </span>
-                </Button>
-            </Link>
+
+            <Button type={'button'} onClick={loadMorePost} variant={'secondary'} className='group rounded-full bg-transparent hover:bg-neutral-200 dark:hover:bg-neutral-800'>
+                <span className='border-b border-dashed border-transparent group-hover:border-neutral-700 text-neutral-700 dark:group-hover:border-neutral-400 dark:text-neutral-400'>
+                    {isLoading ? <LoaderCircle className='animate-spin' /> : isLoaded ? 'No more post to load :)' : 'Load more blog posts'}
+                </span>
+            </Button>
         </>
     )
 }
