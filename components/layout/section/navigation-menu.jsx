@@ -76,7 +76,7 @@ export default function Navigation() {
             <ul className="w-[400px] flex flex-col gap-2 p-4">
               <p className="text-neutral-400 font-semibold">Categories</p>
               <li className="w-full">
-                <Link legacyBehavior passHref href={'/blog?cat=fun'}>
+                <Link legacyBehavior passHref href={'/blog?cat=hobby'}>
                   <NavigationMenuLink className="w-fit flex items-center gap-2 rounded-md px-3 py-2 hover:text-blue-600 dark:hover:text-blue-400 dark:hover:bg-neutral-800 transition-colors duration-150">
                       <ChevronRight size={16}/>
                       <Gamepad2 />
