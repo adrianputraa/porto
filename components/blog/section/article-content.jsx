@@ -1,7 +1,7 @@
 'use client'
 import { useContext } from 'react'
 import Link from 'next/link'
-import { ArticleContext } from './context'
+import { ArticleContext } from './article-context'
 import { Button } from '@/components/ui/button'
 
 export default function Content() {
